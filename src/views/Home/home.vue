@@ -559,11 +559,11 @@ export default {
 }
 
 .index-top .index-top-tabs .i-item:nth-child(odd) {
-  background-image: url("~@/assets/xz1.png");
+  background-image: url("~@/assets/images/homeTabeimg.jpg");
 }
 
 .index-top .index-top-tabs .i-item:nth-child(even) {
-  background-image: url("~@/assets/xz2.png");
+  background-image: url("~@/assets/images/homeTabeimg.jpg");
 }
 
 .index-top .index-top-tabs .i-item .i-box {

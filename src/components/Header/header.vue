@@ -14,35 +14,37 @@
     <div class="nav">
       <div class="container">
         <ul class="nav-bar clearfix" ref="ul">
-          <li  class="item  active" @click="$router.push({path:'/home'})" ref="home">
+          <li class="item active" @click="$router.push({path:'/home'})" ref="home">
             <a>首页</a>
           </li>
           <li class="item" ref="hospitalProfile">
-            <a @click="$router.push({path:'/hospitalProfile'})" >医院概况</a>
+            <a @click="$router.push({path:'/hospitalProfile'})">医院概况</a>
             <ul class="subnav-list">
               <li class="subitem" @click="$router.push({path:'/hospitalProfile'})"><a class="block">医院简介</a></li>
               <li class="subitem" @click="$router.push({path:'/honor'})"><a class="block">医院荣誉</a></li>
               <li class="subitem" @click="$router.push({path:'/Statement'})"><a class="block">院长致辞</a></li>
             </ul>
           </li>
-          <li class="item " @click="$router.push({path:'/allexperts'})"><a target="_blank">专家风采</a></li>
+          <li class="item" ref="allexperts" @click="$router.push({path:'/allexperts'})"><a target="_blank">专家风采</a></li>
           <li class="item" ref="hospitalNews">
             <a @click="$router.push({path:'/hospitalNews?id=2'})">医院动态</a>
             <ul class="subnav-list">
               <li class="subitem" @click="$router.push({path:'/hospitalNews?id=2'})"><a class="block">医院新闻</a></li>
               <li class="subitem"><a @click="$router.push({path:'/hospitalNews?id=3'})" class="block">医院通告</a></li>
-<!--              <li class="subitem" @click="$router.push({path:'/hospitalNews?id=4'})"><a target="_blank" class="block">护理风采</a></li>-->
+              <!--              <li class="subitem" @click="$router.push({path:'/hospitalNews?id=4'})"><a target="_blank" class="block">护理风采</a></li>-->
               <li class="subitem" @click="$router.push({path:'/hospitalNews?id=6'})"><a class="block">学术动态</a></li>
             </ul>
           </li>
-          <li class="item " >
-            <a  @click="$router.push({path:'/hospitallayout'})">就医指南</a>
+          <li class="item ">
+            <a @click="$router.push({path:'/hospitallayout'})">就医指南</a>
             <ul class="subnav-list">
-              <li class="subitem" @click="$router.push({path:'/hospitallayout'})"><a target="_blank" class="block">医院布局</a></li>
-              <li class="subitem" @click="$router.push({path:'/appointment'})"><a target="_blank"  class="block">预约挂号</a>
+              <li class="subitem" @click="$router.push({path:'/hospitallayout'})"><a target="_blank"
+                                                                                     class="block">医院布局</a></li>
+              <li class="subitem" @click="$router.push({path:'/appointment'})"><a target="_blank" class="block">预约挂号</a>
               </li>
-              <li class="subitem" @click="$router.push({path:'/medicalguide'})"><a target="_blank"  class="block">就医指南</a></li>
-              <li class="subitem" @click="$router.push({path:'/health'})"><a target="_blank"  class="block">健康体检</a></li>
+              <li class="subitem" @click="$router.push({path:'/medicalguide'})"><a target="_blank"
+                                                                                   class="block">就医指南</a></li>
+              <li class="subitem" @click="$router.push({path:'/health'})"><a target="_blank" class="block">健康体检</a></li>
             </ul>
           </li>
           <li class="item " ref="department">
@@ -51,7 +53,8 @@
           <li class="item " ref="department">
             <a @click="$router.push({path:'/department'})">科室介绍</a>
             <ul class="subnav-list">
-              <li class="subitem" @click="$router.push({path:'/department'})"><a class="block"><span>全部科室</span></a></li>
+              <li class="subitem" @click="$router.push({path:'/department'})"><a class="block"><span>全部科室</span></a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -79,9 +82,7 @@ export default {
       })
     })
   },
-  methods:{
-
-  },
+  methods: {},
   watch: {
     $route: {
       handler(to, form) {
@@ -89,6 +90,7 @@ export default {
         let hospitalProfile = this.$refs.hospitalProfile
         let department = this.$refs.department
         let hospitalNews = this.$refs.hospitalNews
+        let allexperts = this.$refs.allexperts
         let ul = this.$refs.ul.childNodes
         switch (to.path) {
           case '/home': {
@@ -117,6 +119,13 @@ export default {
               item.className = 'item'
             })
             hospitalNews.className = 'item active'
+            break
+          }
+          case '/allexperts': {
+            ul.forEach(item => {
+              item.className = 'item'
+            })
+            allexperts.className = 'item active'
             break
           }
         }

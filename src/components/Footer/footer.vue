@@ -6,8 +6,11 @@
         <div class="footer-box clearfix">
           <div class="left">
             <p class="text">
-              2022 All Rights Reserved.  <a style="color: #2358C0" href="https://beian.miit.gov.cn/">豫ICP备2021002489号</a> 声明：网站信息仅供参考，不能作为诊断及医疗依据.未经许可不得转载，如需详细解答请咨询医院在线医生
+              2022 All Rights Reserved.
+              <a style="color: #19c3ba" href="https://beian.miit.gov.cn/">豫ICP备2021002489号</a>
+              声明：网站信息仅供参考，不能作为诊断及医疗依据.未经许可不得转载，如需详细解答请咨询医院在线医生
             </p>
+            <p style="color: #fff;font-size: 15px;padding-top: 10px">技术支持: <a href="http://www.zqszjt.com" style="color: #19c3ba;">@河南中启数智</a></p>
           </div>
           <div class="right">
             <ul class="f-r-list clearfix">
